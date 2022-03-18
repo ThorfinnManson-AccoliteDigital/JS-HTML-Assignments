@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <title>progress bar</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<head>
+</head>
+
+<body>
+    <h2>progress bar</h2>
+
+    <div class="w3-light-grey">
+        <div id="myBar" class="w3-container w3-green" style="width:0%">0%</div>
+        </div>
+        <br>
+        <button class="btn" onclick="move()"; this.disabled='true'>Click Me</button> 
+        </div>
+</body>
+
+<script>
+    function move() {
+      var elem = document.getElementById("myBar");   
+      var width = 0;
+      var id = setInterval(frame, 10);
+      function frame() {
+        if (width >= 100) {
+          clearInterval(id);
+        } else {
+          width++; 
+          elem.style.width = width + '%'; 
+          elem.innerHTML = width * 1  + '%';
+        }
+      }
+    }
+    </script>
+</html>
