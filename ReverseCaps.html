@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>The input element</h1>
+
+<body>
+  <label for="input">input :</label>
+  <input type="text" id="input" name="input"><br><br>
+  <label for="displayValue">Output : </label><input type="textbox" name="Output">
+  <button onClick="revCaps()">Rev the caps</button><br>
+</body>
+
+
+
+<script>
+    function revCaps(){
+        var input = document.getElementsByName('input')[0].value;
+        var out = "";
+        for (var index = 0; index < input.length; index++) {
+            let element = input[index];
+            if(element.toUpperCase() == element){
+            out = out + element.toLowerCase();
+            }
+            else{
+                out = out+ element.toUpperCase();
+            }
+            document.getElementsByName('Output')[0].value= out;
+
+        }
+    }
+</script>
+
+</body>
+</html>
